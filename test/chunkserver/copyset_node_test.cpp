@@ -177,8 +177,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));
-
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
 
         copysetNode.SetLocalFileSystem(mockfs);
         copysetNode.SetConfEpochFile(std::move(epochFile));
@@ -209,7 +208,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
 
         copysetNode.SetLocalFileSystem(mockfs);
         copysetNode.SetConfEpochFile(std::move(epochFile));
@@ -237,7 +236,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
 
         copysetNode.SetLocalFileSystem(mockfs);
         copysetNode.SetConfEpochFile(std::move(epochFile));
@@ -263,7 +262,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
         copysetNode.SetLocalFileSystem(mockfs);
         copysetNode.SetConfEpochFile(std::move(epochFile));
         DataStoreOptions options;
@@ -289,7 +288,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
         FakeClosure closure;
         FakeSnapshotReader reader;
         copysetNode.SetLocalFileSystem(mockfs);
@@ -320,7 +319,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
         copysetNode.SetLocalFileSystem(mockfs);
         copysetNode.SetConfEpochFile(std::move(epochFile));
 
@@ -342,7 +341,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
         MockCurveFilesystemAdaptor* cfa =
             new MockCurveFilesystemAdaptor();
         auto sfs = new scoped_refptr<braft::FileSystemAdaptor>(cfa);
@@ -367,7 +366,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
         defaultOptions_.localFileSystem = mockfs;
         MockCurveFilesystemAdaptor* cfa =
             new MockCurveFilesystemAdaptor();
@@ -399,7 +398,7 @@ TEST_F(CopysetNodeTest, error_test) {
         std::shared_ptr<MockLocalFileSystem>
             mockfs = std::make_shared<MockLocalFileSystem>();
         std::unique_ptr<ConfEpochFile>
-            epochFile(new ConfEpochFile(mockfs));;
+            epochFile = std::make_unique<ConfEpochFile>(mockfs);
         defaultOptions_.localFileSystem = mockfs;
         MockCurveFilesystemAdaptor* cfa =
             new MockCurveFilesystemAdaptor();

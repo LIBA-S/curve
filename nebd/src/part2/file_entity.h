@@ -30,7 +30,6 @@
 #include <atomic>
 #include <mutex>  // NOLINT
 #include <unordered_map>
-#include <functional>
 
 #include "nebd/src/common/rw_lock.h"
 #include "nebd/src/common/timeutility.h"

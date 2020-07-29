@@ -30,7 +30,7 @@ COPTS = [
     "-Woverloaded-virtual",
     "-Wnon-virtual-dtor",
     "-Wno-missing-field-initializers",
-    "-std=c++11",
+    "-std=c++14",
 ]
 
 cc_binary(
@@ -51,3 +51,4 @@ cc_binary(
     ],
     copts = COPTS
 )
+

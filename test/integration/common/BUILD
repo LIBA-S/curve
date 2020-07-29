@@ -23,7 +23,7 @@ cc_library(
         "chunkservice_op.h",
         "chunkservice_op.cpp",
     ]),
-    copts = ["-std=c++11"],
+    copts = ["-std=c++14"],
     visibility = ["//visibility:public"],
     deps = [
         "//external:braft",
@@ -40,3 +40,4 @@ cc_library(
         "@com_google_googletest//:gtest",
     ],
 )
+

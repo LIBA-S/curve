@@ -27,7 +27,6 @@
 
 #include <stdarg.h>
 #include <vector>
-#include <string>
 
 namespace curve {
 namespace nbd {
